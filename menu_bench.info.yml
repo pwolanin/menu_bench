@@ -1,0 +1,5 @@
+name: 'Menu Bench'
+type: module
+description: 'Renders a menu with a lot of custom links. Used for benchmarking.'
+package: Testing
+core: 8.x

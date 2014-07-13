@@ -1,0 +1,5 @@
+id: menu_bench
+label: 'Menu for benchmarking'
+description: ''
+langcode: en
+locked: false

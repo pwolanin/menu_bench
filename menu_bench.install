@@ -1,0 +1,24 @@
+<?php
+
+function menu_bench_install() {
+  drupal_flush_all_caches();
+  if (\Drupal::entityManager()->hasDefinition('menu_link')) {
+    for ($i=0; $i<100; $i++) {
+      entity_create('menu_link', array(
+        'link_title' => 'Link ' . ($i+1),
+        'menu_name' => 'menu_bench',
+        'route_name' => 'menu_bench.decoy',
+      ))->save();
+    }
+  }
+  else {
+    for ($i=0; $i<100; $i++) {
+      entity_create('menu_link_content', array(
+        'title' => 'Link ' . ($i+1),
+        'bundle' => 'menu_link_content',
+        'menu_name' => 'menu_bench',
+        'route_name' => 'menu_bench.decoy',
+      ))->save();
+    }
+  }
+}

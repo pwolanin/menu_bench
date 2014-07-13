@@ -1,0 +1,15 @@
+menu_bench.display:
+  path: '/menu-bench'
+  defaults:
+    _content: '\Drupal\menu_bench\MenuBenchController::display'
+    _title: 'Menu Bench'
+  requirements:
+    _access: 'TRUE'
+
+menu_bench.decoy:
+  path: '/menu-bench/decoy'
+  defaults:
+    _content: '\Drupal\menu_bench\MenuBenchController::decoy'
+    _title: 'Menu Bench'
+  requirements:
+    _access: 'TRUE'
